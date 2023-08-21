@@ -9,6 +9,7 @@ import RightArrowIcon from '../assets/icons/right-arrow.png'
 
 
 import LeftArrowIcon from '../assets/icons/left-arrow.png'
+import ExerciseCard from './ExerciseCard';
 
 
 const LeftArrow = () => {
@@ -31,7 +32,7 @@ const RightArrow = () => {
     )
 }
 
-const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
+const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, isBodyPart }) => {
     return (
         <ScrollMenu RightArrow={RightArrow} LeftArrow={LeftArrow} >
 
@@ -41,8 +42,7 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
                     title={item.id || item}
                     m="0px 40px"
                 >
-                    <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
-                    {/* <ExerciseCard exercise={item}/> */}
+                    {isBodyPart ? <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} /> : <ExerciseCard exercise={item} />}
                 </Box>
             ))
             }
