@@ -4,7 +4,7 @@ import Logo from '../assets/images/Logo-1.png'
 const Footer = () => {
     return (
         <Box mt={"80px"} bgcolor="#FF3F4">
-            <Stack gap={"40px"} px={"40px"} pt={"24px"}
+            <Stack gap={"10px"} px={"40px"} pt={"24px"}
                 flexWrap={"wrap"}
                 alignItems={"center"}
             >
@@ -14,7 +14,7 @@ const Footer = () => {
                     mt={"41px"}
                     textAlign={"center"}
                     pb={"40px"}
-                    sx={{ fontSize: { lg: '28px', xs: '20px' } }}
+                    sx={{ fontSize: { lg: '18px', xs: '12px' } }}
                 >Made with 🖤 by Priyank V</Typography>
             </Stack>
         </Box>
